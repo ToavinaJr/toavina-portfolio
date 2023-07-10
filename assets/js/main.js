@@ -1,7 +1,7 @@
-const txt = new Typed('.txt',{
-    strings: ["Toavina", "Sylvianno"],
-    typedSpeed: 100,
-    backSpeed: 100,
-    backDelay: 100,
+const txt_2 = new Typed('.txt_2',{
+    strings: ["an Autodidacte","Font-end","Malagasy"],
+    typedSpeed: 200,
+    backSpeed: 200,
+    backDelay: 200,
     loop: true
 })

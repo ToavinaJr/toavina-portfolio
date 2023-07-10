@@ -2,6 +2,9 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    overflow-x: hidden;
 }
 
 :root{
@@ -55,48 +58,78 @@
 }
 
 /* ********************************************* */
+/* *************  B  O  D  Y  ****************** */
+/* ******************************************** */
+
+
+/* ********************************************* */
 /* *************  H E A D E R ****************** */
 /* ******************************************** */
 
 header{
-
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    left: 0;
 }
 
 header .logo{
-
+    margin: 25px;
+    font-size: 28px;
+    font-weight: 600;
 }
+
 
 header .nav-menu{
 
 }
 
 header .nav-menu .nav-list{
-
+    display: flex;
 }
 
 header .nav-menu .nav-list .nav-item{
-
+    margin: 25px;
+    overflow: hidden;
 }
 
 header .nav-menu .nav-list .nav-item .nav-link{
-
+    font-size: 28px;
 }
 
+header .nav-menu .nav-list .nav-item .nav-link:hover{
+    color:var(--color-tertiary);
+    border-bottom: 2px solid var(--color-tertiary);
+    transition: all .3s ease;
+}
 /* ***************************************** */
 /* *************  M A I N ****************** */
 /* **************************************** */
 
 main{
+    display: flex;
+    flex-direction: column;
+}
 
+section{
+    height: 100vh;
+    width: 100vw;
 }
 
 /* ******************************************* */
 
 #accueil{
-   
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
+.txt{
+    font-size: 48px;
+}
 /* ************************************************ */
 
 #apropos{
