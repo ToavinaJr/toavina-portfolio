@@ -10,7 +10,7 @@
 :root{
     --color-dark: #212529;
     --color-light: #faf9fa;
-    --color-primary: #9792e3;
+    --color-primary: #1b64e4;
     --color-secondary: #809848;
     --color-tertiary: #ff0022;
 }
@@ -96,12 +96,13 @@ header .nav-menu .nav-list .nav-item{
 }
 
 header .nav-menu .nav-list .nav-item .nav-link{
-    font-size: 28px;
+    font-size: 24px;
+    color: var(--color-light);
 }
 
 header .nav-menu .nav-list .nav-item .nav-link:hover{
-    color:var(--color-tertiary);
-    border-bottom: 2px solid var(--color-tertiary);
+    color:var(--color-dark);
+    border-bottom: 2px solid var(--color-dark);
     transition: all .3s ease;
 }
 /* ***************************************** */
