@@ -1,0 +1,120 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --color-dark: #212529;
+    --color-light: #faf9fa;
+    --color-primary: #9792e3;
+    --color-secondary: #809848;
+    --color-tertiary: #ff0022;
+}
+
+/* ************************************************ */
+
+.bg-dark{
+    background: var(--color-dark);
+}
+
+.bg-light{
+    background: var(--color-light);
+}
+
+.bg-primary{
+    background: var(--color-primary);
+}
+
+.bg-secondary{
+    background: var(--color-secondary);
+}
+
+.bg-tertiary{
+    background: var(--color-tertiary);
+}
+
+.txt-dark{
+    color: var(--color-dark);
+}
+
+.txt-light{
+    color: var(--color-light);
+}
+
+.txt-primary{
+    color: var(--color-primary);
+}
+
+.txt-secondary{
+    color: var(--color-secondary);
+}
+
+.txt-tertiary{
+    color: var(--color-tertiary);
+}
+
+/* ********************************************* */
+/* *************  H E A D E R ****************** */
+/* ******************************************** */
+
+header{
+
+}
+
+header .logo{
+
+}
+
+header .nav-menu{
+
+}
+
+header .nav-menu .nav-list{
+
+}
+
+header .nav-menu .nav-list .nav-item{
+
+}
+
+header .nav-menu .nav-list .nav-item .nav-link{
+
+}
+
+/* ***************************************** */
+/* *************  M A I N ****************** */
+/* **************************************** */
+
+main{
+
+}
+
+/* ******************************************* */
+
+#accueil{
+   
+    
+}
+
+/* ************************************************ */
+
+#apropos{
+
+}
+
+/* ************************************************ */
+
+#experiences{
+
+}
+
+/* ************************************************ */
+
+#contact{
+
+}
+
+/* ******************************************** */
+/* ************* F O O T E R ****************** */
+/* ******************************************* */
