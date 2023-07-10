@@ -105,12 +105,13 @@ header .nav-menu .nav-list .nav-item{
 header .nav-menu .nav-list .nav-item .nav-link{
     font-size: 24px;
     color: var(--color-light);
+    transition: all .3s ease;
 }
 
 header .nav-menu .nav-list .nav-item .nav-link:hover{
     color:var(--color-dark);
     border-bottom: 2px solid var(--color-dark);
-    transition: all .3s ease;
+    transform: scale(1.2);
 }
 /* ***************************************** */
 /* *************  M A I N ****************** */
@@ -135,12 +136,16 @@ section{
     align-items: center;
 }
 
-.txt-1{
+.txt-size-3{
     font-size: 48px;
 }
 
-.txt-2{
+.txt-size-2{
     font-size: 24px;
+}
+
+.txt-size-1{
+    font-size: 12px;
 }
 /* ************************************************ */
 
@@ -154,9 +159,50 @@ section{
 /* ************************************************ */
 
 #contact{
-
+    justify-content: center;
+    align-items: center;
 }
 
+.form-container{
+    padding: 20px;
+    border-radius: 10px;
+}
+
+input{
+    height: 45px;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 5px;
+}
+textarea{
+    width: 95%;
+    resize: none;
+    margin: 5px;
+    height: 100px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+input[type="submit"]{
+    width: 95%;
+    margin: 5px;
+    background: var(--color-primary);
+    cursor: pointer;
+}
+
+input[type="submit"]:hover{
+    background: var(--color-tertiary);
+    color:  var(--color-light);
+}
+input:focus{
+    border-color: var(--color-tertiary);
+}
 /* ******************************************** */
 /* ************* F O O T E R ****************** */
 /* ******************************************* */
+footer{
+    margin-top: -30px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 24px;
+}
