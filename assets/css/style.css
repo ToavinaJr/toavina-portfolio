@@ -9,6 +9,7 @@
 
 :root{
     --color-dark: #212529;
+    --color-black: #030608;
     --color-light: #faf9fa;
     --color-primary: #1b64e4;
     --color-secondary: #809848;
@@ -16,7 +17,9 @@
 }
 
 /* ************************************************ */
-
+.bg-black{
+    background: var(--color-black)
+}
 .bg-dark{
     background: var(--color-dark);
 }
@@ -35,6 +38,10 @@
 
 .bg-tertiary{
     background: var(--color-tertiary);
+}
+
+.txt-black{
+    color: var(--color-black);
 }
 
 .txt-dark{
@@ -117,31 +124,32 @@ main{
 section{
     height: 100vh;
     width: 100vw;
+    display: flex;
 }
 
 /* ******************************************* */
 
 #accueil{
-    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.txt{
+.txt-1{
     font-size: 48px;
+}
+
+.txt-2{
+    font-size: 24px;
 }
 /* ************************************************ */
 
 #apropos{
-
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-/* ************************************************ */
-
-#experiences{
-
-}
 
 /* ************************************************ */
 
