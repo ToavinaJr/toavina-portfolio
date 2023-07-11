@@ -10,17 +10,11 @@
 
 :root{
     --color-dark: #212529;
-    --color-black: #030608;
     --color-light: #faf9fa;
     --color-primary: #1b64e4;
-    --color-secondary: #809848;
-    --color-tertiary: #ff0022;
 }
 
 /* ************************************************ */
-.bg-black{
-    background: var(--color-black)
-}
 .bg-dark{
     background: var(--color-dark);
 }
@@ -33,18 +27,6 @@
     background: var(--color-primary);
 }
 
-.bg-secondary{
-    background: var(--color-secondary);
-}
-
-.bg-tertiary{
-    background: var(--color-tertiary);
-}
-
-.txt-black{
-    color: var(--color-black);
-}
-
 .txt-dark{
     color: var(--color-dark);
 }
@@ -55,14 +37,6 @@
 
 .txt-primary{
     color: var(--color-primary);
-}
-
-.txt-secondary{
-    color: var(--color-secondary);
-}
-
-.txt-tertiary{
-    color: var(--color-tertiary);
 }
 
 .txt-size-3{
@@ -126,7 +100,6 @@ header .nav-menu .nav-list .nav-item .nav-link{
     font-size: 24px;
     width: 100%;
     height: 100%;
-    color: var(--color-light);
     transition: all .3s ease;
     padding: 5px;
 }
@@ -219,10 +192,19 @@ input[type="submit"]:hover{
 /* ************* F O O T E R ****************** */
 /* ******************************************* */
 footer{
-    margin-top: -25px;
     text-align: center;
     font-weight: 600;
     font-size: 24px;
+    position: relative;
+    bottom: 50px;
+    left: 0;
+}
+
+footer div{
+    display: flex;
+    width: 40%;
+    margin: auto;
+    justify-content: space-evenly;
 }
 
 @media only screen and (max-width: 450px){
