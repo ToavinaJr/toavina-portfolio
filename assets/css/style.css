@@ -5,6 +5,7 @@
     text-decoration: none;
     list-style: none;
     overflow-x: hidden;
+    /* border: solid 2px red; */
 }
 
 :root{
@@ -64,6 +65,18 @@
     color: var(--color-tertiary);
 }
 
+.txt-size-3{
+    font-size: 48px;
+}
+
+.txt-size-2{
+    font-size: 24px;
+}
+
+.txt-size-1{
+    font-size: 12px;
+}
+
 /* ********************************************* */
 /* *************  B  O  D  Y  ****************** */
 /* ******************************************** */
@@ -86,12 +99,15 @@ header .logo{
     margin: 25px;
     font-size: 28px;
     font-weight: 600;
+    box-shadow: 5px 5px 10px #1d1f25, -5px -5px 10px #272a35;
+    background: #212529;
+    padding: 5px;
 }
 
 
-header .nav-menu{
+/* header .nav-menu{
 
-}
+} */
 
 header .nav-menu .nav-list{
     display: flex;
@@ -100,18 +116,25 @@ header .nav-menu .nav-list{
 header .nav-menu .nav-list .nav-item{
     margin: 25px;
     overflow: hidden;
+    box-shadow: 5px 5px 10px #1d1f25, -5px -5px 10px #272a35;
+    background: #212529;
+    border-radius: 5px;
+    padding: 5px;
 }
 
 header .nav-menu .nav-list .nav-item .nav-link{
     font-size: 24px;
+    width: 100%;
+    height: 100%;
     color: var(--color-light);
     transition: all .3s ease;
+    padding: 5px;
 }
 
-header .nav-menu .nav-list .nav-item .nav-link:hover{
+header .nav-menu .nav-list .nav-item:hover{
     color:var(--color-dark);
     border-bottom: 2px solid var(--color-dark);
-    transform: scale(1.2);
+    box-shadow: none;
 }
 /* ***************************************** */
 /* *************  M A I N ****************** */
@@ -126,6 +149,7 @@ section{
     height: 100vh;
     width: 100vw;
     display: flex;
+    overflow: hidden;
 }
 
 /* ******************************************* */
@@ -136,17 +160,12 @@ section{
     align-items: center;
 }
 
-.txt-size-3{
-    font-size: 48px;
+.text-container{
+    padding: 15px;
+    box-shadow: 5px 5px 10px #1d1f25, -5px -5px 10px #272a35;
+    background: #212529;
 }
 
-.txt-size-2{
-    font-size: 24px;
-}
-
-.txt-size-1{
-    font-size: 12px;
-}
 /* ************************************************ */
 
 #apropos{
@@ -166,6 +185,8 @@ section{
 .form-container{
     padding: 20px;
     border-radius: 10px;
+    box-shadow: 5px 5px 10px #1d1f25, -5px -5px 10px #272a35;
+    background: #212529;
 }
 
 input{
@@ -192,17 +213,30 @@ input[type="submit"]{
 
 input[type="submit"]:hover{
     background: var(--color-tertiary);
-    color:  var(--color-light);
 }
-input:focus{
-    border-color: var(--color-tertiary);
-}
+
 /* ******************************************** */
 /* ************* F O O T E R ****************** */
 /* ******************************************* */
 footer{
-    margin-top: -30px;
+    margin-top: -25px;
     text-align: center;
     font-weight: 600;
     font-size: 24px;
+}
+
+@media only screen and (max-width: 450px){
+    header{
+        height: 40px;
+    }
+    .nav-link{
+        visibility: hidden;
+    }
+    .txt-size-3{
+        font-size: 32px;
+    }
+
+    input{
+        width: 95%;
+    }
 }
