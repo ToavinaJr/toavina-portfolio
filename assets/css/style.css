@@ -74,11 +74,7 @@ header{
     display: none;
 }
 
-.menu-toggle{
-    border-radius: 10px;
-}
-
-.menu-toggle img{
+#menu-toggle{
     width: 40px;
     height: 40px;
     margin: 15px;
