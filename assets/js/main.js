@@ -12,6 +12,24 @@ let toggle = document.getElementById('toggle')
 
 toggle.addEventListener('click', function(){
     let body = document.querySelector('body')
-    body.classList.remove('bg-light')
-    body.classList.add('bg-dark')
+    let navItem = document.querySelectorAll('li')
+    if (modeSombre){
+        body.classList.remove('bg-dark')
+        body.classList.add('bg-light')
+        navItem.forEach(element => {
+            element.classList.remove('neo-dark')
+            element.classList.add('neo-light')
+        });
+        modeSombre = false
+
+    }
+    else{
+        body.classList.remove('bg-light')
+        body.classList.add('bg-dark')
+        navItem.forEach(element => {
+            element.classList.remove('neo-light')
+            element.classList.add('neo-dark')
+        });
+        modeSombre = true
+    }
 })
