@@ -213,7 +213,7 @@ input[type="submit"]{
 
 input[type="submit"]:hover{
     background: var(--color-light);
-    background: var(--color-dark);
+    color: var(--color-dark);
 }
 
 /* ******************************************** */
