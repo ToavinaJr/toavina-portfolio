@@ -5,10 +5,11 @@
     text-decoration: none;
     list-style: none;
     overflow-x: hidden;
-    /* border: solid 2px red; */
+    border: solid 2px red;
 }
 
 :root{
+    --text-color: #333;
     --color-dark: #212529;
     --color-light: #faf9fa;
     --color-primary: #1282a2;
@@ -25,15 +26,6 @@
 
 .bg-primary{
     background: var(--color-primary);
-}
-
-.nav-menu.active{
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    width: 200px;
-    top: 40px;
-    right: -100px;
 }
 
 .txt-dark{
@@ -72,9 +64,7 @@
 /* ********************************************* */
 /* *************  B  O  D  Y  ****************** */
 /* ******************************************** */
-body{
-    
-}
+
 /* ********************************************* */
 /* *************  H E A D E R ****************** */
 /* ******************************************** */
@@ -88,7 +78,7 @@ header{
     left: 0;
 }
 
-header .logo{
+.logo{
     display: flex;
     margin: 25px;
     font-size: 28px;
@@ -103,19 +93,34 @@ header .logo{
 }
 
 .menu-toggle img{
-    width: 60px;
-    height: 60px;
+    width: 40px;
+    height: 40px;
+    margin: 15px;
+    border-radius: 5px;
 }
 
 #toggle{
     width: 40px;
     height: 40px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+}
+
+.nav-menu.active{
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    position: fixed;
+    top: 60px;
+    right: 0;
 }
 
 .nav-menu.active .nav-list{
     display: flex;
     flex-direction: column;
-    width: 200px;
 }
 
 .nav-menu.active .nav-list .nav-item{
@@ -164,6 +169,10 @@ section{
 .text-container{
     padding: 15px;
     border-radius: 5px;
+}
+
+.text-container div{
+    overflow: hidden;
 }
 
 /* ************************************************ */
@@ -232,12 +241,20 @@ footer div{
     justify-content: space-evenly;
 }
 
+footer div a{
+    overflow: hidden;
+}
+footer div a i{
+    width: 40px;
+    height: 40px;
+}
 @media only screen and (max-width: 450px){
     header{
         height: 40px;
     }
-    .nav-link{
-        visibility: hidden;
+    .nav-menu.nav-menu.active{
+        width:100%;
+        height: 100%;
     }
     .txt-size-3{
         font-size: 32px;
@@ -246,4 +263,6 @@ footer div{
     input{
         width: 95%;
     }
+
+
 }

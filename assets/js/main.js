@@ -30,7 +30,7 @@ toggle.addEventListener('click', function(){
 })
 
 menu_toggle.addEventListener('click', () =>{
-    menu_toggle = document.classList.toggle('bg-primary')
     let nav = document.querySelector('nav')
     nav.classList.toggle('active')
+    console.log('click')
 })
