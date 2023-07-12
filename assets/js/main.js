@@ -16,14 +16,15 @@ toggle.addEventListener('click', function(){
         containers.forEach(element => {
             element.classList.remove('neo-dark')
             element.classList.add('neo-light')
+            element.style.color = '#212529'
         });
         modeSombre = false
-
     }
     else{
         containers.forEach(element => {
             element.classList.remove('neo-light')
             element.classList.add('neo-dark')
+            element.style.color = '#f8f9fa'
         });
         modeSombre = true
     }

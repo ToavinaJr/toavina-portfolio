@@ -5,7 +5,6 @@
     text-decoration: none;
     list-style: none;
     overflow-x: hidden;
-    border: solid 2px red;
 }
 
 :root{
@@ -28,10 +27,6 @@
     background: var(--color-primary);
 }
 
-.txt-dark{
-    color: var(--color-dark);
-}
-
 .txt-light{
     color: var(--color-light);
 }
@@ -42,10 +37,6 @@
 
 .txt-size-3{
     font-size: 48px;
-}
-
-.txt-size-2{
-    font-size: 24px;
 }
 
 .txt-size-1{
@@ -167,6 +158,7 @@ section{
 }
 
 .text-container{
+    margin: 10px;
     padding: 15px;
     border-radius: 5px;
 }
@@ -183,7 +175,12 @@ section{
     align-items: center;
 }
 
-
+#apropos div{
+    overflow: hidden;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px;
+}
 /* ************************************************ */
 
 #contact{
@@ -192,6 +189,7 @@ section{
 }
 
 .form-container{
+    margin: 10px;
     padding: 20px;
     border-radius: 10px;
 }
@@ -244,25 +242,26 @@ footer div{
 footer div a{
     overflow: hidden;
 }
+
 footer div a i{
     width: 40px;
     height: 40px;
 }
-@media only screen and (max-width: 450px){
+
+@media only screen and (max-width: 600px){
     header{
         height: 40px;
     }
-    .nav-menu.nav-menu.active{
-        width:100%;
-        height: 100%;
+
+    .logo{
+        visibility: hidden;
     }
+
     .txt-size-3{
-        font-size: 32px;
+        font-size: 28px;
     }
 
     input{
         width: 95%;
     }
-
-
 }
