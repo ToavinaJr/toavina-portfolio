@@ -87,7 +87,7 @@ header{
     border-radius: 5px;
     cursor: pointer;
     position: fixed;
-    bottom: 40px;
+    bottom: 40px; 
     right: 40px;
 }
 
