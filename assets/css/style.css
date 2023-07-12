@@ -224,6 +224,7 @@ footer{
     position: relative;
     bottom: 50px;
     left: 0;
+    z-index: 2;
 }
 
 footer div{
