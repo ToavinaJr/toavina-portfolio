@@ -218,9 +218,9 @@ input[type="submit"]:hover{
 /* ******************************************* */
 footer{
     text-align: center;
-    font-weight: 600;
     font-size: 24px;
     position: relative;
+    width:fit-content ;
     bottom: 50px;
     left: 0;
 }
