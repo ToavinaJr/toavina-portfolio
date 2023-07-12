@@ -1,22 +1,19 @@
-// const txt_2 = new Typed('.txt_2',{
-//     strings: ["un DEV Front-end,","un autodidacte,","Malagasy."],
-//     typedSpeed: 200,
-//     backSpeed: 200,
-//     backDelay: 200,
-//     loop: true
-// })
+const txt_2 = new Typed('.txt_2',{
+    strings: ["un DEV Front-end,","un autodidacte,","Malagasy."],
+    typedSpeed: 200,
+    backSpeed: 200,
+    backDelay: 200,
+    loop: true
+})
 
 let modeSombre = true
 let toggle = document.getElementById('toggle')
-
+let menu_toggle = document.querySelector('#menu-toggle')
 
 toggle.addEventListener('click', function(){
-    let body = document.querySelector('body')
-    let navItem = document.querySelectorAll('li')
+    let containers = document.querySelectorAll('.container')
     if (modeSombre){
-        body.classList.remove('bg-dark')
-        body.classList.add('bg-light')
-        navItem.forEach(element => {
+        containers.forEach(element => {
             element.classList.remove('neo-dark')
             element.classList.add('neo-light')
         });
@@ -24,12 +21,16 @@ toggle.addEventListener('click', function(){
 
     }
     else{
-        body.classList.remove('bg-light')
-        body.classList.add('bg-dark')
-        navItem.forEach(element => {
+        containers.forEach(element => {
             element.classList.remove('neo-light')
             element.classList.add('neo-dark')
         });
         modeSombre = true
     }
+})
+
+menu_toggle.addEventListener('click', () =>{
+    menu_toggle = document.classList.toggle('bg-primary')
+    let nav = document.querySelector('nav')
+    nav.classList.toggle('active')
 })

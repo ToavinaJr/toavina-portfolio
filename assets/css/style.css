@@ -11,7 +11,7 @@
 :root{
     --color-dark: #212529;
     --color-light: #faf9fa;
-    --color-primary: #1b64e4;
+    --color-primary: #1282a2;
 }
 
 /* ************************************************ */
@@ -25,6 +25,15 @@
 
 .bg-primary{
     background: var(--color-primary);
+}
+
+.nav-menu.active{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 200px;
+    top: 40px;
+    right: -100px;
 }
 
 .txt-dark{
@@ -63,8 +72,9 @@
 /* ********************************************* */
 /* *************  B  O  D  Y  ****************** */
 /* ******************************************** */
-
-
+body{
+    
+}
 /* ********************************************* */
 /* *************  H E A D E R ****************** */
 /* ******************************************** */
@@ -88,22 +98,28 @@ header .logo{
 }
 
 
-/* header .nav-menu{
+.nav-menu{
+    display: none;
+}
 
-} */
+.menu-toggle img{
+    width: 60px;
+    height: 60px;
+}
 
 #toggle{
     width: 40px;
     height: 40px;
-    background: red;
 }
 
-header .nav-menu .nav-list{
+.nav-menu.active .nav-list{
     display: flex;
+    flex-direction: column;
+    width: 200px;
 }
 
-header .nav-menu .nav-list .nav-item{
-    margin: 25px;
+.nav-menu.active .nav-list .nav-item{
+    margin: 10px;
     overflow: hidden;
     border-radius: 5px;
     padding: 5px;
