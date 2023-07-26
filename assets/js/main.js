@@ -28,10 +28,15 @@ let toavina = {
             classList : [
                 "nav-menu", "bg-light", "container", "neo-light"
             ],
-            ul : {
-                li : {
-                    classList: ["nav-item", "neo-light", "container"]
-                }
+            navList: {
+                navItem : {
+                    texts : ["accueil", "apropos", "contact"],
+                    classList : ["nav-item", "neo-light", "container"],
+                    navLink : {
+                        classList : ["nav-link", "txt-primary"]
+                    }
+                },
+                classList : ["nav-list"],
             }
         }
     }
@@ -67,11 +72,37 @@ menu.src = toavina.header.img.source
 menu.id = toavina.header.img.id
 menu.alt = toavina.header.img.alt
 
+header.append(logo)
+header.append(menu)
 /* ****************************************** */
 
-header.append(logo)
-header.appendChild(menu)
+let nav = document.createElement('nav')
+addClassLists(nav, toavina.header.nav.classList)
 
+let navList = document.createElement('ul')
+addClassLists(navList, toavina.header.nav.classList)
+
+let texts = toavina.header.nav.navList.navItem.texts;
+for (let i=0; i < texts.length; ++i) {
+    let navItem = document.createElement('li')
+    addClassLists(navItem, toavina.header.nav.navList.navItem.classList)
+
+    let navLink = document.createElement('a')
+    addClassLists(navLink, toavina.header.nav.navList.navItem.navLink.classList)
+
+    navLink.textContent = texts[i]
+    navLink.href = "#" + texts[i]
+
+    navItem.append(navLink)
+
+    navList.append(navItem)
+}
+
+nav.append(navList)
+
+/* ****************************************** */
+
+header.append(nav)
 /* ****************************************** */
 
 let spanList= document.querySelectorAll('.logo span')
