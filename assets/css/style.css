@@ -268,3 +268,12 @@ footer div a i:hover{
         width: 95%;
     }
 }
+
+@media only screen and (max-width: 300px){
+    footer{
+        width: 95%;
+    }
+    footer div{
+        width: 100%;
+    }
+}
