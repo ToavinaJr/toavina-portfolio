@@ -4,13 +4,13 @@ function addClassLists(div, classList) {
     }
 }
 
-const txt_2 = new Typed('.txt_2',{
-    strings: ["un DEV Front-end,","un autodidacte,","Malagasy."],
-    typedSpeed: 200,
-    backSpeed: 200,
-    backDelay: 200,
-    loop: true
-})
+// const txt_2 = new Typed('.txt_2',{
+//     strings: ["un DEV Front-end,","un autodidacte,","Malagasy."],
+//     typedSpeed: 200,
+//     backSpeed: 200,
+//     backDelay: 200,
+//     loop: true
+// })
 
 let toavina = {
     header : {
@@ -39,12 +39,18 @@ let toavina = {
                 classList : ["nav-list"],
             }
         }
+    },
+    accueil : {
+        classList : ["txt-size-3", "txt-apropos", "bg-light", "neo-light", "container"],
+        // texts :  ["Bienvenu sur mon portfolio", 'Mon nom est <s cl', 'Je suis <span class="txt_2 txt-primary"></span>']
+        container : {
+            classList : ["text-container", "bg-light", "neo-light", "container"]
+        }
     }
 }
 
 let modeSombre = true
 let toggle = document.getElementById('toggle')
-
 
 /* ******************************************
 *************       Header      *************
@@ -129,6 +135,21 @@ toggle.addEventListener('click', function(){
         modeSombre = true
     }
 })
+
+
+/* *******************************************
+*************       M A I N      *************
+******************************************* */
+
+let main = document.querySelector('main')
+
+let accueil = document.getElementById('accueil')
+addClassLists(accueil, toavina.accueil.classList)
+let accueilContainer = document.createElement('div')
+addClassLists(accueilContainer, toavina.accueil.container.classList )
+
+accueil.append(accueilContainer)
+main.append(accueil)
 
 let menu_toggle = document.getElementById('menu-toggle')
 menu_toggle.addEventListener('click', () =>{
