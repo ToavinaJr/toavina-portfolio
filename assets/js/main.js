@@ -72,15 +72,13 @@ menu.src = toavina.header.img.source
 menu.id = toavina.header.img.id
 menu.alt = toavina.header.img.alt
 
-header.append(logo)
-header.append(menu)
 /* ****************************************** */
 
 let nav = document.createElement('nav')
 addClassLists(nav, toavina.header.nav.classList)
 
 let navList = document.createElement('ul')
-addClassLists(navList, toavina.header.nav.classList)
+addClassLists(navList, toavina.header.nav.navList.classList)
 
 let texts = toavina.header.nav.navList.navItem.texts;
 for (let i=0; i < texts.length; ++i) {
@@ -94,7 +92,6 @@ for (let i=0; i < texts.length; ++i) {
     navLink.href = "#" + texts[i]
 
     navItem.append(navLink)
-
     navList.append(navItem)
 }
 
@@ -102,7 +99,10 @@ nav.append(navList)
 
 /* ****************************************** */
 
+header.append(logo)
+header.append(menu)
 header.append(nav)
+
 /* ****************************************** */
 
 let spanList= document.querySelectorAll('.logo span')
@@ -134,4 +134,5 @@ let menu_toggle = document.getElementById('menu-toggle')
 menu_toggle.addEventListener('click', () =>{
     let nav = document.querySelector('nav')
     nav.classList.toggle('active')
+    console.log('click')
 })
